@@ -1,43 +1,52 @@
 let tableName = document.getElementById('tableName');
-let numberRows = document.getElementById('numberRows').value;
-let numberColumns = document.getElementById('numberColumns').value;
+let numberRows = document.getElementById('numberRows');
+let numberColumns = document.getElementById('numberColumns');
+let moreSettings = document.getElementById('moreSettings');
+let moreSettingsHidden = document.querySelectorAll('.more-settings__hidden');
 
-let tableBorderWidth = document.getElementById('tableBorderWidth').value + 'px';
-let tableBorderType = document.querySelector('.table-border-type').value;
-let tableBorderColor = document.getElementById('tableBorderColor').value;
+let tableBorderWidth = document.getElementById('tableBorderWidth');
+let tableBorderType = document.querySelector('.table-border-type');
+let tableBorderColor = document.getElementById('tableBorderColor');
 
-let tableDataPadding = document.getElementById('tableDataPadding').value;
+let tableDataPadding = document.getElementById('tableDataPadding');
 
-let tableDataColor = document.getElementById('tableDataColor').value;
-let tableFontSize = document.querySelector('.table-font-size').value;
-let tableFontColor = document.getElementById('tableFontColor').value;
+let tableDataColor = document.getElementById('tableDataColor');
+let tableFontSize = document.querySelector('.table-font-size');
+let tableFontColor = document.getElementById('tableFontColor');
 
-let tableDataWidth = document.getElementById('tableDataWidth').value;
-let dataBorderType = document.querySelector('.data-border-type').value;
-let dataBorderColor = document.getElementById('dataBorderColor').value;
+let tableDataWidth = document.getElementById('tableDataWidth');
+let dataBorderType = document.querySelector('.data-border-type');
+let dataBorderColor = document.getElementById('dataBorderColor');
 
 let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
+let table, row, data;
+
 function createTable() {
-    let table = createElem('table', 'table');
+    table = createElem('table', 'table');
     document.body.appendChild(table);
 
     let caption = createElem('caption', 'table-name', tableName.value);
     table.appendChild(caption);
 
-    let thead = createElem('thead', 'table-header');
-    table.appendChild(thead);
-    createTheadContent(thead, 1, numberColumns);
+    if (!moreSettings.checked) {
+        let thead = createElem('thead', 'table-header');
+        table.appendChild(thead);
+        createTheadContent(thead, 1, numberColumns);
+
+        let tfoot = createElem('tfoot', 'table-footer');
+        table.appendChild(tfoot);
+        createTfootContent(tfoot, 1, numberColumns);
+    }
+    else {
+        table.style.border = tableBorderWidth.value + 'px ' + tableBorderType.value + tableBorderColor.value;
+    }
 
     let tbody = createElem('tbody', 'table-body');
     table.appendChild(tbody);
 
     createTableContent(tbody, numberRows, numberColumns);
-
-    let tfoot = createElem('tfoot', 'table-footer');
-    table.appendChild(tfoot);
-    createTfootContent(tfoot, 1, numberColumns);
 
     return table;
 }
@@ -55,7 +64,7 @@ function createTheadContent(thead, rows, cols) {
         row = createElem('tr', 'table-row');
         thead.appendChild(row);
 
-        for (let j = 0; j < cols; j++) {
+        for (let j = 0; j < cols.value; j++) {
             data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
             row.appendChild(data);
         }
@@ -64,14 +73,16 @@ function createTheadContent(thead, rows, cols) {
 }
 
 function createTableContent(tbody, rows, cols) {
-    let row, data;
 
-    for (let i = 0; i < rows; i++) {
+    for (let i = 0; i < rows.value; i++) {
         row = createElem('tr', 'table-row');
         tbody.appendChild(row);
 
-        for (let j = 0; j < cols; j++) {
+        for (let j = 0; j < cols.value; j++) {
             data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
+            if (moreSettings.checked) {
+                data.style.padding = tableDataPadding.value + "px";
+            }
             row.appendChild(data);
         }
     }
@@ -82,7 +93,7 @@ function createTfootContent(tfoot, rows, cols) {
         row = createElem('tr', 'table-row');
         tfoot.appendChild(row);
 
-        for (let j = 0; j < cols; j++) {
+        for (let j = 0; j < cols.value; j++) {
             data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
             row.appendChild(data);
         }
@@ -91,5 +102,31 @@ function createTfootContent(tfoot, rows, cols) {
 }
 
 btnCreate.addEventListener('click', function () {
-    let table = createTable();
+    table = createTable();
+});
+
+moreSettings.addEventListener('change', function () {
+    for (let i = 0; i < moreSettingsHidden.length; i++) {
+        moreSettingsHidden[i].classList.toggle('more-settings__hidden');
+    }
+});
+
+tableBorderWidth.addEventListener('input', function () {
+    table.style.borderWidth = tableBorderWidth.value + 'px';
+});
+
+tableBorderType.addEventListener('input', function () {
+    table.style.borderStyle = tableBorderType.value;
+});
+
+tableBorderColor.addEventListener('input', function () {
+    table.style.borderColor = tableBorderColor.value;
+});
+
+tableDataPadding.addEventListener('input', function () {
+    let tableData = document.getElementsByClassName('table-data');
+
+    for (let td of tableData) {
+        td.style.padding = tableDataPadding.value + 'px';
+    }
 });
