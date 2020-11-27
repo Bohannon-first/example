@@ -19,6 +19,10 @@ let tableDataWidth = document.getElementById('tableDataWidth');
 let dataBorderType = document.querySelector('.data-border-type');
 let dataBorderColor = document.getElementById('dataBorderColor');
 
+let modal = document.querySelector('.modal');
+let btnYes = modal.querySelector('.btn-yes');
+let btnNo = modal.querySelector('.btn-no');
+
 let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
@@ -31,6 +35,7 @@ function createTable() {
         manageError('p', 'error', 'Таблица может быть только одна!');
     }
     else {
+        modal.classList.add('modal-hidden');
         table = createElem('table', 'table');
         tableSettings.after(table);
 
@@ -59,16 +64,20 @@ function createTable() {
 }
 
 function manageError(tag, className, text) {
-    let error = createElem(tag, className, text);
-    tableSettings.after(error);
+    modal.classList.add('modal-hidden');
 
-    setTimeout(() => {
-        error.classList.add('error__display');
-    }, 500);
+    if (!document.querySelector('.error')) {
+        let error = createElem(tag, className, text);
+        tableSettings.after(error);
 
-    setTimeout(() => {
-        error.remove();
-    }, 2000);
+        setTimeout(() => {
+            error.classList.add('error__display');
+        }, 500);
+
+        setTimeout(() => {
+            error.remove();
+        }, 2000);
+    }
 }
 
 function createElem(tag, className, text) {
@@ -125,7 +134,24 @@ function removeTable() {
 }
 
 btnCreate.addEventListener('click', function () {
-    table = createTable();
+    modal.classList.remove('modal-hidden');
+
+    btnYes.addEventListener('click', function () {
+        table = createTable();
+    });
+
+    btnNo.addEventListener('click', function () {
+        modal.classList.add('modal-hidden');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key == "Enter") {
+            table = createTable();
+        }
+        if (event.key == "Escape") {
+            modal.classList.add('modal-hidden');
+        }
+    });
 });
 
 btnRemove.addEventListener('click', function () {

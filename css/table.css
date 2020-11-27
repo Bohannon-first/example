@@ -32,6 +32,7 @@ html {
 
 /*** Свойства формы и её элементов ***/
 .table-settings {
+    margin: auto;
     min-width: 550px;
     max-width: 650px;
     padding: 1.8rem 1.2rem;
@@ -102,6 +103,62 @@ html {
     background-image: linear-gradient(rgb(230, 69, 69), rgb(126, 43, 43));
     color: #fff;
 }
+/*******/
+
+/*** Модальное окно ***/
+
+.modal {
+    box-sizing: border-box;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: -200px;
+    margin-top: -200px;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.911);
+}
+
+.modal-hidden {
+    display: none;
+}
+
+.modal .modal-title {
+    font-size: 1.4rem;
+    line-height: 150%;
+    text-align: center;
+    color: #fff;
+}
+
+.modal .modal-buttons {
+    margin-top: 20px;
+}
+
+.modal-buttons .btn {
+    color: #fff;
+    border-radius: 15px;
+}
+
+.modal-buttons .btn-yes {
+    margin-right: 15px;
+    border-color: darkgreen;
+    background-image: linear-gradient(darkgreen, black, darkgreen);
+}
+
+.modal-buttons .btn-no {
+    border-color: darkred;
+    background-image: linear-gradient(darkred, black, darkred);
+}
+
 /*******/
 
 /* Свойства сгенерированной таблицы */
