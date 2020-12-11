@@ -15,12 +15,23 @@ li {
 
 header .wrapper {
     display: flex;
-    max-width: 1920px;
+    width: 1920px;
+}
+
+header .logo {
+    margin-right: 144px;
+    margin-top: 20px;
+    margin-left: 55px;
+    left: 55px;
+    top: 20px;
+
 }
 
 .main-menu {
     display: flex;
 }
+
+
 
  .center-block li  {
    margin-right: 38px; 
@@ -28,8 +39,10 @@ header .wrapper {
 
  .right-block {
     flex-direction: row;
-    margin-left: 863px;
-    justify-content: flex-end;
+    position: absolute;
+    right: 55px;
+    top: 20px;
+
 }
 
 
