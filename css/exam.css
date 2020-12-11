@@ -1,9 +1,16 @@
 /* Общие свойства */
 
-
+html {
+    font-family: 'Roboto', 'Tahoma', sans-serif;  
+    font-size: 18px;
+    color: #272d4e;
+    line-height: auto;
+    letter-spacing: 0%;
+}
 
 a {
     text-decoration: none;
+    color: #272d4e;
 }
 
 li {
@@ -16,6 +23,8 @@ li {
 header .wrapper {
     display: flex;
     width: 1920px;
+    background-color: #dae5f6;
+   
 }
 
 header .logo {
@@ -50,3 +59,50 @@ header .logo {
     margin-right: 38px;
 
 } 
+
+.user .btn {
+    background-color: #7854f7;
+    padding: 13px 14px;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 120px;
+    height: 47px;
+}
+
+/* Конец header */
+
+
+
+/* Начало promo*/
+
+.promo .wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #dae5f6;
+    width: 1920px;
+    height: 870px;
+}
+
+.promo-content .title {
+    font-family: 'Ubuntu', 'Tahoma', sans-serif;
+    max-width: 820px;
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 95px;
+    color: #272D4E;
+}
+
+.promo-content p {
+    line-height: 25px;
+    color: #94a2b3;
+}
+
+.buttons .btn-start {
+    background-color: #7854f7;
+    padding: 26px 63px 25px 62px;
+    border-radius: 60px;
+    width: 260px;
+    height: 72px;
+    color: #ffffff;
+
+}
