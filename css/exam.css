@@ -1,1 +1,39 @@
+/* Общие свойства */
 
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* Начало header */
+
+header .wrapper {
+    display: flex;
+    max-width: 1920px;
+}
+
+.main-menu {
+    display: flex;
+}
+
+ .center-block li  {
+   margin-right: 38px; 
+}
+
+ .right-block {
+    flex-direction: row;
+    margin-left: 863px;
+    justify-content: flex-end;
+}
+
+
+.user a {
+    margin-right: 38px;
+
+} 
