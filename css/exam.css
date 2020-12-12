@@ -75,13 +75,30 @@ header .logo {
 
 /* Начало promo*/
 
+.promo {
+    position: relative;
+    z-index: 2; 
+    min-height: 620px;
+    background-image: url(../img/img_exam/wave-promo.svg);
+    background-position: 50% 50%;
+}
+
+
 .promo .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #dae5f6;
     width: 1920px;
     height: 870px;
 }
+
+.promo-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 115px;
+    margin-left: 220px;;
+}
+
 
 .promo-content .title {
     font-family: 'Ubuntu', 'Tahoma', sans-serif;
@@ -90,19 +107,38 @@ header .logo {
     font-size: 85px;
     line-height: 95px;
     color: #272D4E;
+    
 }
 
 .promo-content p {
+    margin-top: 0px;
     line-height: 25px;
+    margin-bottom: 60px;
     color: #94a2b3;
 }
 
 .buttons .btn-start {
     background-color: #7854f7;
     padding: 26px 63px 25px 62px;
+    margin-top: 30px;
     border-radius: 60px;
     width: 260px;
     height: 72px;
     color: #ffffff;
 
+}
+
+.buttons .btn-custom {
+    line-height: 25px;
+    color: #94a2b3;
+}
+
+.buttons .btn-custom span {
+    color: #299ef3;
+}
+
+.example-website {
+    position: absolute;
+    top: 24px;
+    right: 5px;
 }
