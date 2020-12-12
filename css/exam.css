@@ -3,6 +3,7 @@
 html {
     font-family: 'Roboto', 'Tahoma', sans-serif;  
     font-size: 18px;
+    font-weight: bold;
     color: #272d4e;
     line-height: auto;
     letter-spacing: 0%;
@@ -100,7 +101,7 @@ header .logo {
 }
 
 
-.promo-content .title {
+.promo-content .title-main {
     font-family: 'Ubuntu', 'Tahoma', sans-serif;
     max-width: 820px;
     font-weight: bold;
@@ -141,4 +142,89 @@ header .logo {
     position: absolute;
     top: 24px;
     right: 5px;
+}
+
+/* Конец promo*/
+
+/* Начало guide*/
+
+.guide .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    max-height: 900px;
+    margin: auto;
+}
+
+.wrapper .guide-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+.guide-list .list-one {
+    max-width: 536px;
+    max-height: 520px;
+    position: relative;
+}
+
+
+.title-second {
+    align-self: center;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+.description .title-third {
+    margin: 0;
+    font-size: 36px;
+    line-height: 70px;
+}
+
+.description p {
+    line-height: 30px;
+    color: #94a2b3;
+
+}
+
+.description a {
+    line-height: 25px;
+    color: #299ef3;
+}
+ 
+.list-one .payment {
+    position: absolute;
+    top: 58px;
+    left: -104px;
+
+   
+}
+ .list-one .pay {
+    position: absolute;
+    top: 45px;
+    left: -25px;
+ }
+
+ .guide-list .list-two {
+     max-width: 430px;
+     max-height: 560px;
+     position: relative;
+ }
+
+.list-two .photophone {
+    margin-top: 75px;
+}
+/* 
+.list-two .square {
+    position: absolute;
+    top: 55px;
+    right: 220px;
+} */
+
+.guide-list .item {
+    margin-right: 0;
+    padding: 0;
 }
