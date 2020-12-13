@@ -3,7 +3,6 @@
 html {
     font-family: 'Roboto', 'Tahoma', sans-serif;  
     font-size: 18px;
-    font-weight: bold;
     color: #272d4e;
     line-height: auto;
     letter-spacing: 0%;
@@ -176,6 +175,7 @@ header .logo {
     font-size: 55px;
     font-weight: bold;
     line-height: 70px;
+    text-align: center;
 }
 
 .description .title-third {
@@ -194,7 +194,15 @@ header .logo {
     line-height: 25px;
     color: #299ef3;
 }
- 
+/*  
+.list-one .phone-payment {
+    margin-right: 50px;
+} */
+
+.list-one .description {
+    margin-right: 50px;
+}
+
 .list-one .payment {
     position: absolute;
     top: 58px;
@@ -209,22 +217,82 @@ header .logo {
  }
 
  .guide-list .list-two {
+    position: relative;
      max-width: 430px;
      max-height: 560px;
-     position: relative;
+     /* margin-left: 30px; */
+     
  }
 
 .list-two .photophone {
-    margin-top: 75px;
-}
-/* 
+    /* position: absolute;
+    top: 80px;
+    right: -40px; */
+    margin-top: 100px;
+    
+} 
+
 .list-two .square {
     position: absolute;
-    top: 55px;
-    right: 220px;
-} */
-
-.guide-list .item {
-    margin-right: 0;
-    padding: 0;
+    top: 45px;
+    left: 50px;
 }
+
+.list-two .mailchimp {
+    position: absolute;
+    top: 120px;
+    left: 300px;
+
+}
+
+.list-two .facebook {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+}
+
+.list-two .jetpack {
+    position: absolute;
+    top: 220px;
+    left: 230px;
+
+}
+
+.list-two .ads {
+    position: absolute;
+    top: 360px;
+    left: 150px;
+}
+
+
+
+
+.guide-list .list-three {
+    position: relative;
+    margin-left: 105px;
+}
+
+.list-three .community-big {
+    margin-top: 200px;
+}
+
+.list-three .small_1 {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+ 
+
+.list-three .small_2 {
+    position: absolute;
+    top: 70px;
+    left: 250px;
+} 
+
+
+.list-three .small_3 {
+    position: absolute;
+    top: 320px;
+    left: 330px;
+} 
+
