@@ -296,3 +296,111 @@ header .logo {
     left: 330px;
 } 
 
+
+/*Конец guide*/
+
+
+/* Начало about-us*/
+
+.about-us {
+    background-image: url(../img/img_exam/ellipse-big.svg),
+                      url(../img/img_exam/ellipse-medium.svg),
+                      url(../img/img_exam/ellipse-little.svg),
+                      url(../img/img_exam/ellipse-small.svg),
+                      url(../img/img_exam/bgc.svg);
+                        
+    background-repeat: no-repeat,
+                       no-repeat,
+                       no-repeat,
+                       no-repeat,
+                       no-repeat;
+    background-position: 15% 20%,
+                         87% 52%,
+                         67% 42%, 
+                         12% 10%,
+                         0 0;  
+      
+            
+    margin-top: 250px;
+}
+
+.about-us .wrapper {
+    min-width: 1920px;
+    min-height: 1110px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-content .content-top {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    transform: translateX(-15%);
+   
+}
+
+.content-top_photo {
+    transform: translateY(-10%);
+}
+
+
+.content-bottom_photo {
+    transform: translateY(-20%);
+}
+
+.about-us-content .content-bottom {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    transform: translateX(13%);
+}
+
+
+
+.content-top_description {
+    width: 480px; 
+    margin-left: 40px;
+    margin-top: 95px;
+}
+
+.content-bottom_description {
+    width: 480px;
+} 
+
+
+.content-top_subtitle,
+.content-bottom_subtitle {
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 100%;
+    font-weight: normal;
+    
+
+}
+
+.content-top_text,
+.content-bottom_text {
+    color: #ffffff;
+    line-height: 30px;
+    letter-spacing: 0%;
+    margin-bottom: 60px;
+    font-weight: normal;
+   
+}
+
+.content-top-btn, 
+.content-bottom-btn {
+    width: 256px;
+    height: 64px;
+    background-color: #70c217;
+    padding: 22px 26px;
+    border-radius: 60px;
+    color: #ffffff;
+    font-weight: normal;
+    
+}
+
+/* Конец about-us*/
