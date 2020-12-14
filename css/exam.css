@@ -1,5 +1,30 @@
 /* Общие свойства */
 
+/* Bold */
+
+@font-face {
+    font-family: 'CircularStd';
+    src: local('CircularStd'),
+         url('../fonts/CircularStd-Bold.ttf') format('truetype'),
+         url('../fonts/CircularStd-Bold.woff') format('woff'); 
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Book */
+
+@font-face {
+    font-family: 'CircularStd';
+    src: local('CircularStd'),
+         url('../fonts/CircularStd-Book.ttf') format('truetype'),
+         url('../fonts/CircularStd-Book.woff') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 html {
     font-family: 'Roboto', 'Tahoma', sans-serif;  
     font-size: 18px;
@@ -101,7 +126,7 @@ header .logo {
 
 
 .promo-content .title-main {
-    font-family: 'Ubuntu', 'Tahoma', sans-serif;
+    font-family: 'CircularStd', 'Tahoma', sans-serif;
     max-width: 820px;
     font-weight: bold;
     font-size: 85px;
@@ -171,6 +196,7 @@ header .logo {
 
 
 .title-second {
+    font-family: 'CircularStd', 'Roboto', sans-serif;
     align-self: center;
     font-size: 55px;
     font-weight: bold;
@@ -180,6 +206,7 @@ header .logo {
 
 .description .title-third {
     margin: 0;
+    font-family: 'CircularStd', 'Roboto', sans-serif;
     font-size: 36px;
     line-height: 70px;
 }
@@ -373,10 +400,11 @@ header .logo {
 
 .content-top_subtitle,
 .content-bottom_subtitle {
+    font-family: 'CircularStd', 'Tahoma', sans-serif;
     font-size: 36px;
     color: #ffffff;
     line-height: 100%;
-    font-weight: normal;
+    font-weight: bold;
     
 
 }
@@ -387,7 +415,7 @@ header .logo {
     line-height: 30px;
     letter-spacing: 0%;
     margin-bottom: 60px;
-    font-weight: normal;
+    font-weight: 400;
    
 }
 
@@ -404,3 +432,34 @@ header .logo {
 }
 
 /* Конец about-us*/
+
+
+
+/* Начало reviews*/
+
+.reviews .wrapper {
+
+    min-width: 1920px;
+    min-height: 1200px;
+
+} 
+
+.reviews-block .review-text {
+    font-family: 'CircularStd', 'Verdana', sans-serif;
+    font-size: 27.6px;
+    line-height: 39px;
+    letter-spacing: 0%;
+    color: #94a2b3;
+    font-weight: normal;
+    width: 730px;
+    height: 390px;
+}
+
+
+.buttons-reviews .btn-prev,
+.buttons-reviews .btn-next {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
