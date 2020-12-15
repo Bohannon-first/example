@@ -611,3 +611,57 @@ header .logo {
     padding: 24px 40px 20px 44px;
     font-weight: 700;
 }
+
+/* Конец support*/
+
+
+/* Начало footer*/
+
+footer .wrapper {
+    min-width: 1920px;
+    min-height: 788px;
+    background-color: #7854f7;
+}
+
+.footer-top-promises {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-top-promises-guarantees {
+    display: flex;
+    flex-direction: row;
+    margin-right: 118px;
+    
+}
+
+.footer-top-promises-support {
+    display: flex;
+    flex-direction: row;
+    margin-right: 118px;
+}
+
+.footer-top-promises-secure {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-promise {
+    margin-right: 15px;
+}
+
+.text-promise {
+    font-size: 20px;
+    line-height: 52.5px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 0;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+}
