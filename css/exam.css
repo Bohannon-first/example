@@ -65,11 +65,19 @@ header .logo {
     display: flex;
 }
 
-
-
  .center-block li  {
    margin-right: 38px; 
 }
+
+
+.center-block li a:hover {
+    color: rgb(6, 243, 57);
+}
+
+.center-block li a:active {
+    color: rgb(252, 0, 126);
+}
+
 
  .right-block {
     flex-direction: row;
@@ -79,11 +87,30 @@ header .logo {
 
 }
 
-
 .user a {
     margin-right: 38px;
 
 } 
+
+.user a:hover {
+    color: rgb(6, 243, 57);
+}
+
+
+.user a:active {
+    color: rgb(252, 0, 126);
+}
+
+
+.user .btn:hover {
+    background-color: rgb(122, 16, 34);
+    color: #ffffff;
+}
+
+.user .btn:active {
+    background-color: rgb(6, 243, 57);
+}
+
 
 .user .btn {
     background-color: #7854f7;
@@ -153,6 +180,17 @@ header .logo {
 
 }
 
+.buttons .btn-start:hover {
+    background-color: rgb(122, 16, 34);
+    color: #ffffff;
+}
+
+
+.buttons .btn-start:active {
+    background-color: rgb(6, 243, 57);
+}
+
+
 .buttons .btn-custom {
     line-height: 25px;
     color: #94a2b3;
@@ -160,6 +198,14 @@ header .logo {
 
 .buttons .btn-custom span {
     color: #299ef3;
+}
+
+.buttons .btn-custom span:hover {
+    color:rgb(214, 12, 12);
+}
+
+.buttons .btn-custom span:active {
+    color:rgb(11, 216, 28);
 }
 
 .example-website {
@@ -221,10 +267,16 @@ header .logo {
     line-height: 25px;
     color: #299ef3;
 }
-/*  
-.list-one .phone-payment {
-    margin-right: 50px;
-} */
+
+
+.description a:hover {
+    color: rgb(214, 12, 12);
+}
+
+.description a:active {
+    color:rgb(11, 216, 28);
+}
+
 
 .list-one .description {
     margin-right: 50px;
@@ -247,14 +299,10 @@ header .logo {
     position: relative;
      max-width: 430px;
      max-height: 560px;
-     /* margin-left: 30px; */
-     
+      
  }
 
 .list-two .photophone {
-    /* position: absolute;
-    top: 80px;
-    right: -40px; */
     margin-top: 100px;
     
 } 
@@ -405,7 +453,6 @@ header .logo {
     line-height: 100%;
     font-weight: bold;
     
-
 }
 
 .content-top_text,
@@ -427,7 +474,18 @@ header .logo {
     border-radius: 60px;
     color: #ffffff;
     font-weight: normal;
-    
+}
+
+.content-top-btn:hover,
+.content-bottom-btn:hover {
+    background-color: rgb(19, 141, 70);
+    color:rgb(0, 0, 0);
+}
+
+.content-top-btn:active,
+.content-bottom-btn:active {
+    background-color: rgb(177, 51, 42);
+    color: rgb(179, 206, 29);
 }
 
 /* Конец about-us*/
@@ -550,7 +608,7 @@ header .logo {
                        no-repeat,
                        no-repeat;
 
-    background-position: center 60%,
+    background-position:    center 60%,
                             2% 70%,
                             90% 60%,
                             5% 33%,
@@ -584,6 +642,11 @@ header .logo {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    background-image: url(../img/img_exam/ellips-footer.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 100%;
+
     background-color: #5f37ef;
     width: 100%;
     min-height: 280px;
@@ -620,9 +683,9 @@ footer .wrapper {
     min-width: 1920px;
     min-height: 750px;
 
-    background-image: url(../img/img_exam/Line-footer.svg);
+    background-image:  url(../img/img_exam/Line-footer.svg);
     background-repeat: no-repeat;
-    background-position: center 40%;
+    background-position:  center 40%;
 
     background-color: #7854f7;
 }
