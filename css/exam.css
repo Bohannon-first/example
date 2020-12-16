@@ -293,7 +293,6 @@ header .logo {
 
 
 
-
 .guide-list .list-three {
     position: relative;
     margin-left: 105px;
@@ -619,11 +618,11 @@ header .logo {
 /* footer-top*/
 footer .wrapper {
     min-width: 1920px;
-    min-height: 788px;
+    min-height: 750px;
 
     background-image: url(../img/img_exam/Line-footer.svg);
     background-repeat: no-repeat;
-    background-position: center 45%;
+    background-position: center 40%;
 
     background-color: #7854f7;
 }
@@ -668,7 +667,7 @@ footer .wrapper {
 .logo-footer {
     display: flex;
     justify-content: center;
-    margin-top: 160px;
+    margin-top: 150px;
 }
 
 
@@ -678,14 +677,14 @@ footer .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 80px;
 
 }
 
 .footer-navigation .block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 
@@ -696,9 +695,53 @@ footer .wrapper {
 
 .block p {
     align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 52.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+
 }
 
 .block ul {
     padding: 0;
+    margin-top: 0;
+    
 }
+
+.block ul li a {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/*footer-copyright*/
+
+.footer-bottom .footer-copyright {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+ .social img:not(:last-child) {
+     margin-right: 54px;
+}
+
+ .privacy p {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #272d4e;
+}
+
+
+/*Конец footer*/
+
 
