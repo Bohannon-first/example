@@ -616,10 +616,15 @@ header .logo {
 
 
 /* Начало footer*/
-
+/* footer-top*/
 footer .wrapper {
     min-width: 1920px;
     min-height: 788px;
+
+    background-image: url(../img/img_exam/Line-footer.svg);
+    background-repeat: no-repeat;
+    background-position: center 45%;
+
     background-color: #7854f7;
 }
 
@@ -627,6 +632,7 @@ footer .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 50px;
 }
 
 .footer-top-promises-guarantees {
@@ -653,15 +659,46 @@ footer .wrapper {
 
 .text-promise {
     font-size: 20px;
-    line-height: 52.5px;
     font-weight: 400;
     color: #ffffff;
-    margin-top: 45px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
 .logo-footer {
     display: flex;
     justify-content: center;
-    margin-top: 135px;
+    margin-top: 160px;
 }
+
+
+/*footer-bottom*/
+
+.footer-bottom .footer-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.footer-navigation .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-navigation .block:not(:last-of-type) {
+    margin-right: 138px; 
+}
+
+
+.block p {
+    align-self: flex-start;
+}
+
+.block ul {
+    padding: 0;
+}
+
