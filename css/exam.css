@@ -168,7 +168,7 @@ form {
     border-bottom: 2px solid #7854f7;
     background-color: #ffffff;
   }
-  button {
+  .search-all {
     background: #ffffff;
     border: none;
     height: 42px;
@@ -178,16 +178,24 @@ form {
     right: 3px;
     cursor: pointer;
     border-radius: 30px;
+    outline: none;
     
   }
-  button:before {
+  .search-all:before {
     content: "\f002";
     font-family: FontAwesome;
     font-size: 18px;
     color: #272d4e;
-
   }
 
+  
+  .search-all:hover::before {
+      color:  rgb(6, 243, 57);
+  }
+
+  .search-all:active::before {
+      color:  rgb(252, 0, 126);
+}
 
 
 /* Конец header */
