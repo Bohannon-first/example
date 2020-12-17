@@ -1,6 +1,6 @@
 /* Общие свойства */
 
-/* Bold */
+/* Шрифт Bold */
 
 @font-face {
     font-family: 'CircularStd';
@@ -11,7 +11,7 @@
     font-style: normal;
 }
 
-/* Book */
+/* Шрифт Book */
 
 @font-face {
     font-family: 'CircularStd';
@@ -20,7 +20,7 @@
          url('../fonts/CircularStd-Book.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
-}
+} 
 
 
 
@@ -43,13 +43,15 @@ li {
 }
 
 
-/* НАЧАЛО promo*/
+/* НАЧАЛО promo */
 
 .promo {
-    /* background-image: url(../img/img_exam/wave-promo.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0; */
-    background: linear-gradient(to bottom, #E5efff, #ffffff);
+    background-image: url(../img/img_exam/wave-promo.svg),
+                      linear-gradient(to bottom, #E5efff, #ffffff);
+    background-repeat:  no-repeat,
+                        no-repeat;
+    background-position:  99%  20%,
+                          0, 0; 
 }
 
 
@@ -132,12 +134,67 @@ header .logo {
     height: 47px;
 }
 
+    /* Стили поиска */
+
+form {
+    position: relative;
+    width: 42px;
+    margin: 0 auto;
+    height: 42px;
+  }
+
+  input {
+    height: 42px;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+
+  }
+  input:focus {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    width: 300px;
+    z-index: 1;
+    border-bottom: 2px solid #7854f7;
+    background-color: #ffffff;
+  }
+  button {
+    background: #ffffff;
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    cursor: pointer;
+    border-radius: 30px;
+    
+  }
+  button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 18px;
+    color: #272d4e;
+
+  }
+
+
+
 /* Конец header */
 
 
 
 /* Продолжение promo*/
-
 
 
 .promo .container-content {
@@ -205,12 +262,13 @@ header .logo {
 }
 
 .buttons .btn-custom span:hover {
-    color:rgb(214, 12, 12);
+    color: rgb(6, 243, 57);
 }
 
 .buttons .btn-custom span:active {
-    color:rgb(11, 216, 28);
+    color: rgb(252, 0, 126);
 }
+
 
 .example-website {
     position: absolute;
@@ -276,11 +334,11 @@ header .logo {
 
 
 .description a:hover {
-    color: rgb(214, 12, 12);
+    color: rgb(6, 243, 57);
 }
 
 .description a:active {
-    color:rgb(11, 216, 28);
+    color: rgb(252, 0, 126);
 }
 
 
@@ -829,7 +887,6 @@ footer .wrapper {
     font-weight: 400;
     color: #272d4e;
 }
-
 
 
 .privacy p a:hover {
