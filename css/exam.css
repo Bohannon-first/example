@@ -24,7 +24,6 @@
 
 
 
-
 html {
     font-family: 'Roboto', 'Tahoma', sans-serif;  
     font-size: 18px;
@@ -38,9 +37,21 @@ a {
     color: #272d4e;
 }
 
+
 li {
     list-style-type: none;
 }
+
+
+/* НАЧАЛО promo*/
+
+.promo {
+    /* background-image: url(../img/img_exam/wave-promo.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0; */
+    background: linear-gradient(to bottom, #E5efff, #ffffff);
+}
+
 
 
 /* Начало header */
@@ -48,7 +59,7 @@ li {
 header .wrapper {
     display: flex;
     width: 1920px;
-    background-color: #dae5f6;
+    padding-top: 40px;
    
 }
 
@@ -83,7 +94,7 @@ header .logo {
     flex-direction: row;
     position: absolute;
     right: 55px;
-    top: 20px;
+    top: 55px;
 
 }
 
@@ -125,21 +136,14 @@ header .logo {
 
 
 
-/* Начало promo*/
-
-.promo {
-    position: relative;
-    z-index: 2; 
-    min-height: 620px;
-    background-image: url(../img/img_exam/wave-promo.svg);
-    background-position: 50% 50%;
-}
+/* Продолжение promo*/
 
 
-.promo .wrapper {
+
+.promo .container-content {
     display: flex;
     flex-direction: row;
-    background-color: #dae5f6;
+    
     width: 1920px;
     height: 870px;
 }
@@ -210,11 +214,13 @@ header .logo {
 
 .example-website {
     position: absolute;
-    top: 24px;
+    top: 112px;
     right: 5px;
 }
 
-/* Конец promo*/
+/* КОНЕЦ promo*/
+
+
 
 /* Начало guide*/
 
@@ -507,7 +513,7 @@ header .logo {
                          31% 64%;
                         
 
-    background-color: #Ecf0fd;
+    background: linear-gradient(#ffffff, #Ecf0fd, #ffffff);
     
 }
 
@@ -564,7 +570,6 @@ header .logo {
     padding: 140px 82px 0px 82px;
     background-size: contain;
     margin-bottom: 0;
-    /* box-sizing: border-box; */
 
 }
 
@@ -578,7 +583,7 @@ header .logo {
 
 .buttons-reviews .btn-prev,
 .buttons-reviews .btn-next {
-    background-color: #Ecf0fd;
+    background-color: #ecf0fd;
     cursor: pointer;
     outline: none;
     border: none;
@@ -673,6 +678,19 @@ header .logo {
     padding: 24px 40px 20px 44px;
     font-weight: 700;
 }
+
+.support-footer .btn-support:hover {
+    background-color: #2702ad;
+    color:#df9d60;
+    border-color: rgb(175, 212, 8);
+}
+
+.support-footer .btn-support:active {
+    background-color: #b35a07;
+    color:rgb(122, 16, 34);
+    border-color: #79b987;
+}
+
 
 /* Конец support*/
 
@@ -781,6 +799,14 @@ footer .wrapper {
     color: #ffffff;
 }
 
+.block ul li a:hover {
+    color: rgb(255, 30, 0);
+}
+
+.block ul li a:active {
+    color: #000000;
+}
+
 /*footer-copyright*/
 
 .footer-bottom .footer-copyright {
@@ -802,6 +828,17 @@ footer .wrapper {
     line-height: 22px;
     font-weight: 400;
     color: #272d4e;
+}
+
+
+
+.privacy p a:hover {
+    color: rgb(255, 30, 0);  
+}
+
+.privacy p a:active {
+    color: #000000;
+    font-weight: bold;
 }
 
 
