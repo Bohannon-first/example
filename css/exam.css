@@ -56,13 +56,66 @@ li {
 
 
 
+
+/* Стили модального окна для регистрации*/
+
+/* 
+.form-wrap {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #E5efff;
+	border: 2px solid #7854f7;
+	border-radius: 10px;
+	
+	
+	width: 800px;
+	height: 600px;
+	margin: auto;
+}
+
+
+.form-wrap form {
+	margin: 0 15px;
+}
+
+
+fieldset legend {
+	text-align: center;
+}
+
+
+.form-title {
+	text-align: center;
+	font-family: 'CircularStd', 'Roboto', sans-serif;
+	font-size: 30px;
+}
+
+
+.form-block {
+	margin-bottom: 20px;
+}
+
+.btn-form {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+}
+
+.btn-create {
+	margin-right: 20px;
+} */
+
+
+
+
 /* Начало header */
 
 header .wrapper {
     display: flex;
     width: 1920px;
     padding-top: 40px;
-   
+    
 }
 
 header .logo {
@@ -72,23 +125,6 @@ header .logo {
     left: 55px;
     top: 20px;
 
-}
-
-.main-menu {
-    display: flex;
-}
-
- .center-block li  {
-   margin-right: 38px; 
-}
-
-
-.center-block li a:hover {
-    color: rgb(6, 243, 57);
-}
-
-.center-block li a:active {
-    color: rgb(252, 0, 126);
 }
 
 
@@ -102,7 +138,7 @@ header .logo {
 
 .user a {
     margin-right: 38px;
-
+    font-weight: 500;
 } 
 
 .user a:hover {
@@ -115,6 +151,15 @@ header .logo {
 }
 
 
+.user .btn {
+    background-color: #7854f7;
+    padding: 13px 14px;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 120px;
+    height: 47px;
+}
+
 .user .btn:hover {
     background-color: rgb(122, 16, 34);
     color: #ffffff;
@@ -125,14 +170,93 @@ header .logo {
 }
 
 
-.user .btn {
-    background-color: #7854f7;
-    padding: 13px 14px;
+
+
+ /* Стили main-menu - начало */
+
+ .navigation-menu {
+    margin-top: 24px;
+    box-sizing: border-box;
+  }
+  
+  .navigation-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .main-menu {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+  }
+  
+  
+  .main-menu > li {
+    position: relative;
+    font-family: 'Roboto', 'Verdana' sans-serif;
+    color: #272d4e;
+    display: block;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .main-menu > li > a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #272d4e;
+    padding: 15px 30px;
+    outline: none;
+  }
+  
+  .main-menu li a:hover { 
+      
+      color: rgb(6, 243, 57) 
+  }
+  
+  
+  .main-menu li a:active {
+      color: rgb(252, 0, 126);
+  }
+  
+  
+  .submenu {
+    background: #E5efff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 230px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: 0.5s ease-in-out;
     border-radius: 5px;
-    color: #ffffff;
-    width: 120px;
-    height: 47px;
-}
+    box-shadow:  0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  }
+  
+  .submenu li a {
+    color: #272d4e;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 18px;
+    display: block;
+  }
+  
+
+  .submenu li:last-child a { border-bottom: none; }
+  .main-menu > li:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  /* Стили main-menu конец */
+
+
+
 
     /* Стили поиска */
 
@@ -151,7 +275,7 @@ form {
     border-bottom: 2px solid transparent;
     outline: none;
     background: transparent;
-    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    transition: 0.8s cubic-bezier(0.5, 0.8, 0.5, 1);
     position: absolute;
     top: 0;
     right: 0;
@@ -179,8 +303,8 @@ form {
     cursor: pointer;
     border-radius: 30px;
     outline: none;
-    
   }
+
   .search-all:before {
     content: "\f002";
     font-family: FontAwesome;
@@ -188,7 +312,6 @@ form {
     color: #272d4e;
   }
 
-  
   .search-all:hover::before {
       color:  rgb(6, 243, 57);
   }
@@ -202,7 +325,7 @@ form {
 
 
 
-/* Продолжение promo*/
+/* Продолжение promo */
 
 
 .promo .container-content {
@@ -219,7 +342,6 @@ form {
     margin-top: 115px;
     margin-left: 220px;;
 }
-
 
 .promo-content .title-main {
     font-family: 'CircularStd', 'Tahoma', sans-serif;
@@ -304,7 +426,6 @@ form {
     justify-content: space-around;
 
 }
-
 
 .guide-list .list-one {
     max-width: 536px;
@@ -656,11 +777,11 @@ form {
     
 }
 
-/* Конец reviews*/
+/* Конец reviews */
 
 
 
-/*Начало support*/
+/* Начало support */
 
 .support .wrapper {
     min-width: 1920px;
@@ -699,7 +820,6 @@ form {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
 
 
 .support-people p {
@@ -763,6 +883,7 @@ form {
 
 /* Начало footer*/
 /* footer-top*/
+
 footer .wrapper {
     min-width: 1920px;
     min-height: 750px;
@@ -873,7 +994,7 @@ footer .wrapper {
     color: #000000;
 }
 
-/*footer-copyright*/
+/* footer-copyright */
 
 .footer-bottom .footer-copyright {
     width: 100%;
